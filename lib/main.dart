@@ -12,14 +12,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(390, 844),
-      minTextAdapt: true,
-      splitScreenMode: true,
+      designSize: const Size(390, 844), // Set the design size for responsive design
+      minTextAdapt: true, // Enable text adaptation
+      splitScreenMode: true, // Enable split-screen mode for tablets
       builder: (context, child) {
         return MaterialApp(
           title: 'Manga App',
-          debugShowCheckedModeBanner: false,
-          home: const SplashView(),
+          themeMode: ThemeMode.light, // Set the theme mode to light
+          theme: ThemeData.light(), // Define light theme
+          darkTheme: ThemeData.dark(), // Define dark theme
+          debugShowCheckedModeBanner: false, // Hide debug banner
+          home: const SplashView(), // Set the home widget
         );
       },
     );
