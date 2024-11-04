@@ -18,7 +18,7 @@ class AppTextStyle {
   static TextStyle boldTet18 = TextStyle(
     fontSize: 18.sp, // Added .sp
     fontWeight: FontWeight.w500,
-    color: AppColor.gray,
+    color: AppColor.mainColor,
   );
 
   static TextStyle text12 = TextStyle(
