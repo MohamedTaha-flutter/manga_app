@@ -4,8 +4,8 @@ import 'package:mangaat_app/core/constant/colors_style.dart';
 
 class AppTextStyle {
   static TextStyle boldText24 = TextStyle(
-    fontSize: 24.sp, // Added .sp for responsive font size
-    fontWeight: FontWeight.w400,
+    fontSize: 30.sp, // Added .sp for responsive font size
+    fontWeight: FontWeight.bold,
     color: Colors.white,
   );
 

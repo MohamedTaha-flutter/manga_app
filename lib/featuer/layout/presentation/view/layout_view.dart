@@ -23,8 +23,9 @@ class LayoutView extends StatelessWidget {
             appBar: AppBar(
               automaticallyImplyLeading: false,
               systemOverlayStyle: SystemUiOverlayStyle(
-                  statusBarIconBrightness: Brightness.dark,
-                  statusBarColor: AppColor.white),
+                statusBarIconBrightness: Brightness.dark,
+                statusBarColor: AppColor.white,
+              ),
               backgroundColor: AppColor.black,
               elevation: 0,
               title: Row(
@@ -41,18 +42,24 @@ class LayoutView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("Good Morning",
-                              style: AppTextStyle.text12.copyWith(
-                                  fontSize: 15.sp)),
+                              style: AppTextStyle.text12
+                                  .copyWith(fontSize: 15.sp)),
                           Text("Mohammed Taha", style: AppTextStyle.boldTet18),
                         ],
                       ),
                     ],
                   ),
+                  Spacer(),
                   Row(
                     children: [
-                      Icon(Icons.search, color: Colors.white),
-                      SizedBox(width: 20),
-                      Icon(Icons.notifications, color: Colors.white),
+                      IconButton(
+                        icon: Icon(Icons.search, color: Colors.white),
+                        onPressed: () {},
+                      ),
+                      IconButton(
+                        icon: Icon(Icons.notifications, color: Colors.white),
+                        onPressed: () {},
+                      ),
                     ],
                   ),
                 ],
@@ -60,12 +67,11 @@ class LayoutView extends StatelessWidget {
             ),
             bottomNavigationBar: BottomNavigationBar(
               currentIndex: cubit.currentIndex,
-              onTap: (index)
-              {
+              onTap: (index) {
                 cubit.changeLayoutScreen(index);
               },
               type: BottomNavigationBarType.shifting,
-              items:cubit.item,
+              items: cubit.item,
               backgroundColor: AppColor.black,
               selectedItemColor: Colors.white,
               unselectedItemColor: Colors.white,
@@ -73,43 +79,6 @@ class LayoutView extends StatelessWidget {
             body: cubit.views[cubit.currentIndex],
           );
         },
-      ),
-    );
-  }
-}
-
-class CustomBottomNavigationBar extends StatelessWidget {
-  const CustomBottomNavigationBar({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return BottomAppBar(
-      color: Colors.black,
-      shape: CircularNotchedRectangle(),
-      notchMargin: 8.0,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 10.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(
-              icon: Icon(Icons.home, color: Colors.white),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.favorite, color: Colors.white),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.play_circle_filled, color: Colors.white),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(Icons.person, color: Colors.white),
-              onPressed: () {},
-            ),
-          ],
-        ),
       ),
     );
   }
