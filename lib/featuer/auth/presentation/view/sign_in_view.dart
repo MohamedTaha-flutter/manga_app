@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart%20';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mangaat_app/core/constant/colors_style.dart';
+import 'package:mangaat_app/core/constant/constant.dart';
 import 'package:mangaat_app/core/constant/test_style.dart';
+import 'package:mangaat_app/featuer/auth/presentation/widget/auth_button.dart';
 import 'package:mangaat_app/featuer/auth/presentation/widget/custom_tet_foem_field.dart';
+import 'package:mangaat_app/featuer/layout/presentation/view/layout_view.dart';
 
 class SignInView extends StatefulWidget {
   const SignInView({
@@ -16,7 +19,8 @@ class SignInView extends StatefulWidget {
 class _SignInViewState extends State<SignInView> {
   final TextEditingController signInEmailController = TextEditingController();
 
-  final TextEditingController signInPasswordController = TextEditingController();
+  final TextEditingController signInPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,25 +36,15 @@ class _SignInViewState extends State<SignInView> {
           controller: signInPasswordController,
           hintText: 'Password',
           isPassword: true,
-          suffixIcon: IconButton(onPressed:(){} , icon: Icon(Icons.remove_red_eye_outlined)),
-
+          suffixIcon: IconButton(
+              onPressed: () {}, icon: Icon(Icons.remove_red_eye_outlined)),
         ),
         SizedBox(height: 20.h),
-        ElevatedButton(
+        AuthButton(
+          buttonName: 'SIGN IN ',
           onPressed: () {
-            // Handle sign-in logic here
+            goTo(context, (context) => LayoutView());
           },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: AppColor.mainColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.r),
-            ),
-            minimumSize: Size(double.infinity, 50.h),
-          ),
-          child: Text(
-            'Sign In',
-            style: AppTextStyle.boldText24.copyWith(color: Colors.white),
-          ),
         ),
       ],
     );

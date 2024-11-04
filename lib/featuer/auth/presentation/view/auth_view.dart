@@ -6,7 +6,7 @@ import 'package:mangaat_app/featuer/auth/presentation/view/sign_in_view.dart';
 import 'package:mangaat_app/featuer/auth/presentation/view/sign_up_view.dart';
 import 'package:mangaat_app/featuer/auth/presentation/widget/custom_tet_foem_field.dart';
 import 'package:mangaat_app/featuer/auth/presentation/widget/social_media_icon.dart';
-import 'package:mangaat_app/core/widget/switch_bttton.dart';
+import 'package:mangaat_app/core/widget/custom_theme_switch_bttton.dart';
 
 class AuthView extends StatefulWidget {
   const AuthView({super.key});
@@ -17,23 +17,29 @@ class AuthView extends StatefulWidget {
 
 class _AuthViewState extends State<AuthView> {
   bool isLogin = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      appBar: AppBar(
+        actions: [SunMoonSwitch()],
+        backgroundColor: AppColor.white,
+      ),
+      backgroundColor: AppColor.white,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 30.0.w),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SunMoonSwitch(),
-                  ],
+                Container(
+                  height: 130.h,
+                    width: 150.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20.r),
+                      image: DecorationImage(image: AssetImage("assets/images/solo_logo.png"))
+                    ),
                 ),
-                SizedBox(height: 90.h,),
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -107,7 +113,7 @@ class _AuthViewState extends State<AuthView> {
       alignment: Alignment.center,
       child: Text(
         text,
-        style: AppTextStyle.text12.copyWith(fontSize: 16),
+        style: AppTextStyle.text12.copyWith(fontSize: 16.sp),
       ),
     );
   }
