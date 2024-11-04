@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart%20';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class HorizontalItemList extends StatelessWidget {
-  const HorizontalItemList({super.key});
+class ComingSoon extends StatelessWidget {
+  const ComingSoon({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250.h,
+      height: 220.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 5, // Number of items in the list
@@ -19,7 +19,7 @@ class HorizontalItemList extends StatelessWidget {
               color: Colors.grey[850],
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                image: AssetImage('assets/images/anime.jpg'),
+                image: AssetImage('assets/images/manga.jpg'),
                 // Placeholder image
                 fit: BoxFit.cover,
               ),
@@ -29,21 +29,22 @@ class HorizontalItemList extends StatelessWidget {
               children: [
                 Container(
                   width: double.infinity,
-                  color: Colors.black.withOpacity(0.7),
+                  color: Colors.black.withOpacity(0.6),
                   padding: EdgeInsets.all(4.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Title $index',
+                        'Title ',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 14.sp,
+                            fontSize: 16.sp,
                             fontWeight: FontWeight.bold),
                       ),
-                      Text(
-                        '7.9 ★  Chapters: 167',
-                        style: TextStyle(color: Colors.white70, fontSize: 12.sp),
+                      Icon(
+                        Icons.favorite,
+                        color: Colors.red,
+                        size: 25.r,
                       ),
                     ],
                   ),

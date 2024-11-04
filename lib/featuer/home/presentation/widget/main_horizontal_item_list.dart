@@ -21,7 +21,7 @@ class MainItemList extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12.r),
               image: DecorationImage(
-                image: AssetImage('assets/images/sp.webp'),
+                image: AssetImage('assets/images/one.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -34,7 +34,7 @@ class MainItemList extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Solo Leveling ',
+                        'One Piece ',
                         style: AppTextStyle.boldTet18.copyWith(color:AppColor.white,fontSize: 25.sp),
                       ),
                       Row(
