@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart%20';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mangaat_app/core/constant/colors_style.dart';
 import 'package:mangaat_app/core/constant/constant.dart';
-import 'package:mangaat_app/core/constant/test_style.dart';
 import 'package:mangaat_app/featuer/auth/presentation/widget/auth_button.dart';
 import 'package:mangaat_app/featuer/auth/presentation/widget/custom_tet_foem_field.dart';
 import 'package:mangaat_app/featuer/layout/presentation/view/layout_view.dart';

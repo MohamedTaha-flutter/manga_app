@@ -4,7 +4,6 @@ import 'package:mangaat_app/core/constant/colors_style.dart';
 import 'package:mangaat_app/core/constant/test_style.dart';
 import 'package:mangaat_app/featuer/auth/presentation/view/sign_in_view.dart';
 import 'package:mangaat_app/featuer/auth/presentation/view/sign_up_view.dart';
-import 'package:mangaat_app/featuer/auth/presentation/widget/custom_tet_foem_field.dart';
 import 'package:mangaat_app/featuer/auth/presentation/widget/social_media_icon.dart';
 import 'package:mangaat_app/core/widget/custom_theme_switch_bttton.dart';
 
