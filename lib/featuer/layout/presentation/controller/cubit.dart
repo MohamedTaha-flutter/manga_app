@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mangaat_app/core/constant/colors_style.dart';
 import 'package:mangaat_app/featuer/favorite/presentation/view/favorite_view.dart';
 import 'package:mangaat_app/featuer/home/presentation/view/home_view.dart';
-import 'package:mangaat_app/featuer/profile/presentation/view/profile_view.dart';
+import 'package:mangaat_app/featuer/setting/presentation/view/setting_view.dart';
 import 'package:mangaat_app/featuer/video/presentation/view/vidio_view.dart';
 
 import 'state.dart';
@@ -19,7 +19,7 @@ class LayoutCubit extends Cubit<LayoutState> {
     emit(ChangeBottomNavigationBarState());
   }
 
-  List<Widget> views = [HomeView(), FavoriteView(), VideoView(), ProfileView()];
+  List<Widget> views = [HomeView(), FavoriteView(), VideoView(), SettingView()];
 
   List<BottomNavigationBarItem> item = [
     BottomNavigationBarItem(
@@ -38,7 +38,7 @@ class LayoutCubit extends Cubit<LayoutState> {
       backgroundColor: AppColor.black,
     ),
     BottomNavigationBarItem(
-      icon: Icon(Icons.person),
+      icon: Icon(Icons.settings),
       label: "",
       backgroundColor: AppColor.black,
     ),

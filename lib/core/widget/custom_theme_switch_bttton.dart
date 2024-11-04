@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart%20';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mangaat_app/core/constant/colors_style.dart';
 
 class SunMoonSwitch extends StatefulWidget {
   const SunMoonSwitch({super.key});
@@ -26,13 +27,13 @@ class _SunMoonSwitchState extends State<SunMoonSwitch> {
         padding: EdgeInsets.all(5.w),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20.r),
-          color: isSun ? Colors.yellow[100] : Colors.blue[100],
+          color: isSun ? Colors.yellow[100] : Colors.grey[200],
         ),
         child: Stack(
           alignment: Alignment.center,
           children: [
             Align(
-              alignment: isSun ? Alignment.centerLeft : Alignment.centerRight,
+              alignment: isSun ?  Alignment.centerRight : Alignment.centerLeft  ,
               child: AnimatedSwitcher(
                 duration: Duration(milliseconds: 300),
                 transitionBuilder: (child, animation) =>
@@ -45,7 +46,7 @@ class _SunMoonSwitchState extends State<SunMoonSwitch> {
               ),
             ),
             Align(
-              alignment: isSun ? Alignment.centerRight : Alignment.centerLeft,
+              alignment: isSun ?Alignment.centerLeft : Alignment.centerRight  ,
               child: Container(
                 width: 30.r,
                 height: 30.r,
